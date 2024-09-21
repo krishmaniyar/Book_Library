@@ -55,7 +55,7 @@ function makeGrid()
             newElement.style.maxWidth = "" + 100/gridNum + "%";
         }
         newElement.innerHTML = "<h3>Name: " + myLibrary[i].name + "<br>Author Name: " + myLibrary[i].author + "<br>Serial No: " + myLibrary[i].serial_no + "<br>No of Pages:  " + myLibrary[i].pages + "</h3>";
-        newElement.innerHTML += "<button type='button' onclick='remove(" + i + ")' style='border-radius: 10px; background-color: beige;font-size: 1.3em;padding: 1%; margin-top:10px;'>Delete</button>"
+        newElement.innerHTML += "<button type='button' onclick='remove(" + i + ")' class='buttons' style='margin-top:10px;padding:2%;'>Delete</button>"
     }
 }
 
