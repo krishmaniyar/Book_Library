@@ -132,8 +132,10 @@ h1,h3
     border-radius: 20px;
     border-left: 10px solid yellow;
     min-width: 27%;
+    max-height: 33%;
     flex: 1 1 0;
     padding: 2%;
+    font-size: 0.8em;
 }
 
 #container > .add-book-form
