@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Library</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="sidebar">
@@ -39,7 +41,7 @@
                     </button>
                 </div>
                 <div class="Add_Book">
-                    <button type="button">
+                    <button type="button" id="add">
                         <img src="images/Add_Book.png" alt="Add Books">
                         <h3>Add Books</h3>
                     </button>
@@ -60,8 +62,42 @@
                     </h1>
                 </div>
             </div>
+            <div class="main1">
+                <div id="container">
+                    <div class="add-book-form" id="erase">
+                        <form action="get" id="detail">
+                            <div class="flex1">
+                                <div class="flex1_left">
+                                    <label for="book_name">*BOOK NAME</label>
+                                    <br>
+                                    <input type="text" id="book_name" name="details" placeholder="Atomic Habits"
+                                        required>
+                                    <br>
+                                    <label for="Serial No.">*SERIAL NUMBER</label>
+                                    <br>
+                                    <input type="Number" id="serial_no" placeholder="1" name="details" required>
+                                    <br>
+                                </div>
+                                <div class="flex1_right">
+                                    <label for="author_name">*AUTHOR NAME</label>
+                                    <br>
+                                    <input type="text" id="author_name" name="details" placeholder="James Clear"
+                                        required>
+                                    <br>
+                                    <label for="no_of_pages">*NUMBER OF PAGES</label>
+                                    <br>
+                                    <input type="number" id="no_of_pages" name="details" required>
+                                    <br>
+                                </div>
+                            </div>
+                        </form>
+                        <button type="button" name="details" onclick="library()" style="border-radius: 10px; background-color: beige; border: 0px; font-size: 1.3em;padding: 1%;">Submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="javascript.js"></script>
 </body>
+
 </html>
