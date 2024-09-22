@@ -11,7 +11,7 @@ myLibrary.push(newBook2);
 
 makeGrid();
 
-function Book(name, author, serial_no, pages) {
+function Book(name, author, serial_no, pages,status) {
     this.name = name;
     this.author = author;
     this.serial_no = serial_no;
@@ -32,6 +32,7 @@ function addBookToLibrary() {
     makeGrid();
 }
 
+// Add Book Page
 
 function add_book()
 {
@@ -39,9 +40,34 @@ function add_book()
     container.append(add_book_form);
 }
 
+// Default page
+
 function makeGrid()
 {
     add_book_form.remove();
+    document.getElementById("container").innerHTML="";
+    for (i=0;i<gridNum;i++)
+    {
+        let newElement = document.createElement("div");
+        container.appendChild(newElement).className = "grid-item";
+        if(gridNum > 3)
+        {
+            newElement.style.maxWidth = "28%";
+        }
+        else
+        {
+            newElement.style.maxWidth = "" + 100/gridNum + "%";
+        }
+        newElement.innerHTML = "<h3>Name: " + myLibrary[i].name + "<br>Author Name: " + myLibrary[i].author + "<br>Serial No: " + myLibrary[i].serial_no + "<br>No of Pages:  " + myLibrary[i].pages + "</h3>";
+    }
+}
+
+// Delete Page
+
+function makeGridDelete()
+{
+    add_book_form.remove();
+    document.getElementById("container").innerHTML="";
     for (i=0;i<gridNum;i++)
     {
         let newElement = document.createElement("div");
@@ -63,6 +89,16 @@ document.getElementById("add").addEventListener("click",()=>
 {
     add_book();
     document.getElementById("detail").reset();
+});
+
+document.getElementById("remove").addEventListener("click",()=>
+{
+    makeGridDelete();
+});
+
+document.getElementById("first_page").addEventListener("click",()=>
+{
+    makeGrid();
 });
 
 function library()

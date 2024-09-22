@@ -26,15 +26,23 @@ h1,h3
     padding: 2%;
 }
 
-.container > .sidebar > .sheader
+button
+{
+    font-family:Gowun Batang;
+}
+
+.container > .sidebar > .sheader > button
 {
     display:flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 30%;
+    background-color: beige;
+    border: 0px;
+    font-size: 1.5em;
 }
 
-.container > .sidebar > .sheader >img
+.container > .sidebar > .sheader > button > img
 {
     width: 40px;
     border-radius: 100%;
