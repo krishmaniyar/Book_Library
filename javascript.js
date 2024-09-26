@@ -1,13 +1,19 @@
-let gridNum = 2;
+let gridNum = 3;
 const container = document.getElementById("container");
 const add_book_form = document.getElementById("erase");
 
 let myLibrary = [];
 
-const newBook1 = new Book("Atomic Habit", "James Clear", 1, 285);
-const newBook2 = new Book("Zero To One", "Peter Thiel", 2, 186);
-myLibrary.push(newBook1);
-myLibrary.push(newBook2);
+function insertbook() {
+    const newBook0 = new Book("","",0,0);
+    const newBook1 = new Book("Atomic Habit", "James Clear", 1, 285);
+    const newBook2 = new Book("Zero To One", "Peter Thiel", 2, 186);
+    myLibrary.push(newBook0);
+    myLibrary.push(newBook1);
+    myLibrary.push(newBook2);
+}
+
+insertbook();
 
 makeGrid();
 
@@ -46,7 +52,7 @@ function makeGrid()
 {
     add_book_form.remove();
     document.getElementById("container").innerHTML="";
-    for (i=0;i<gridNum;i++)
+    for (i=1;i<gridNum;i++)
     {
         let newElement = document.createElement("div");
         container.appendChild(newElement).className = "grid-item";
@@ -62,13 +68,11 @@ function makeGrid()
     }
 }
 
-// Delete Page
-
 function makeGridDelete()
 {
     add_book_form.remove();
     document.getElementById("container").innerHTML="";
-    for (i=0;i<gridNum;i++)
+    for (i=1;i<gridNum;i++)
     {
         let newElement = document.createElement("div");
         container.appendChild(newElement).className = "grid-item";
@@ -108,7 +112,8 @@ function library()
 
 function remove(j)
 {
-    myLibrary.splice(j,j);
+    console.log(j);
+    console.log(myLibrary.splice(j,j));
     document.getElementById("container").innerHTML="";
     gridNum--;
     makeGrid();
