@@ -31,18 +31,18 @@
                         <h3>Books</h3>
                     </button>
                 </div>
-                <!-- <div class="Read_Books">
-                    <button type="button">
+                <div class="Read_Books">
+                    <button type="button" onclick="makeGridIfRead()">
                         <img src="images/Read_Books.png" alt="Read Books">
                         <h3>Read Books</h3>
                     </button>
                 </div>
-                <div class="Unread_Books">
+                <div class="Unread_Books" onclick="makeGridIfUnread()">
                     <button type="button">
                         <img src="images/Unread_Books.png" alt="Unread Books">
                         <h3>Unread Books</h3>
                     </button>
-                </div> -->
+                </div>
                 <div class="Add_Book">
                     <button type="button" id="add">
                         <img src="images/Add_Book.png" alt="Add Books">
@@ -80,6 +80,10 @@
                                     <br>
                                     <input type="Number" id="serial_no" placeholder="1" name="details" required>
                                     <br>
+                                    <div class="read">
+                                        Read
+                                        <input type="checkbox" id="checkbox">
+                                    </div>
                                 </div>
                                 <div class="flex1_right">
                                     <label for="author_name">*AUTHOR NAME</label>

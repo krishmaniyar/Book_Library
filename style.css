@@ -207,3 +207,16 @@ input:focus
     font-size: 1.3em;
     padding: 1%;
 }
+
+#checkbox
+{
+    width: 30px;
+    height: 30px;
+    box-shadow: none;
+    border-radius: 50px;
+}
+
+.read
+{
+    font-size: 2em;
+}
