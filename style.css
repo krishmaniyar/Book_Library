@@ -11,7 +11,8 @@ body
 {
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 94vh;
+    height: 94%;
 }
 
 h1,h3
@@ -93,12 +94,14 @@ button
 .container > .main
 {
     flex: 4;
+    min-height: 94vh;
+    height: 100%;
 }
 
 .container > .main > .header
 {
     background-image: url("images/book_background.jpg");
-    height: 35vh;
+    height: 30vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:100% 80%;
@@ -119,14 +122,14 @@ button
 .main > .main1
 {
     background-color: rgb(238, 220, 197);
-    height: 59vh;
-    padding: 3vh;
+    min-height: 64vh;
+    height: 100%;
 }
 
 #container
 {
-    height: 100%;
-    width: 100%;
+    padding: 20px;
+    min-height: 60vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -140,7 +143,7 @@ button
     border-radius: 20px;
     border-left: 10px solid yellow;
     min-width: 27%;
-    max-height: 33%;
+    max-height: 22vh;
     flex: 1 1 0;
     padding: 2%;
     font-size: 0.8em;
