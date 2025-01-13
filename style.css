@@ -143,6 +143,7 @@ button
     border-radius: 20px;
     border-left: 10px solid yellow;
     min-width: 27%;
+    max-width: 27%;
     max-height: 22vh;
     flex: 1 1 0;
     padding: 2%;
@@ -222,4 +223,26 @@ input:focus
 .read
 {
     font-size: 2em;
+}
+
+.unread {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border: 0px;
+    border-radius: 30px;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.readbu {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border: 0px;
+    border-radius: 30px;
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5em;
 }
